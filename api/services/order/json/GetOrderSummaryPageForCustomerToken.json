@@ -1,0 +1,26 @@
+{
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "properties": {
+    "orderSummary": {
+      "type": "null"
+    },
+    "wallet": {
+      "type": "boolean"
+    },
+    "basketId": {
+      "type": "string"
+    },
+    "promoCode": {
+      "type": "null"
+    },
+    "userInfo": {
+      "type": "null"
+    },
+    "deals": {
+      "type": "array"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "id": "number",
+  "displayName": "string",
+  "url": "string",
+  "text": "string",
+  "status": "string",
+  "description": "string",
+  "externalUrl": "string",
+  "brand": "string",
+  "externalUrlTarget": "boolean",
+  "isSource": "boolean",
+  "ppcDealPageText": "string",
+  "itoCode": "string",
+  "ppcDealType": "string",
+  "sourcePageId": "number",
+  "staticPageType": {
+    "name": "string",
+    "decorator": "string"
+  },
+  "site": {
+    "id": "number",
+    "name": "string",
+    "shortName": "string",
+    "latLon": {
+      "lat": "number",
+      "lon": "number"
+    },
+    "brand": "string",
+    "countryCode": "string",
+    "siteGroup": {
+      "id": "number",
+      "siteGroupCode": "string",
+      "name": "string",
+      "description": "string",
+      "viewSelector": "string",
+      "autoOrder": "boolean",
+      "brand": "string"
+    },
+    "description": "string",
+    "domain": "string",
+    "status": "string"
+  },
+  "images": [
+    "string"
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "number",
+  "name": "string",
+  "shortName": "string",
+  "position": "number",
+  "dealCategories": [
+    {
+      "id": "number",
+      "name": "string",
+      "shortName": "string",
+      "position": "number",
+      "canonicalPathType": "string",
+      "locations": [
+        {
+          "location": "string",
+          "brand": "string",
+          "text": "string",
+          "imageUrl": "string",
+          "altText": "string",
+          "countryCode": "string"
+        }
+      ]
+    }
+  ],
+  "subCategories": [
+    {
+      "id": "number",
+      "code": "string",
+      "name": "string",
+      "shortName": "string",
+      "affiliateName": "string",
+      "canonicalPathType": "string",
+      "relatedSubCategories": [
+        {
+          "code": "string",
+          "shortName": "string"
+        }
+      ],
+      "locations": [
+        {
+          "location": "string",
+          "brand": "string",
+          "text": "string",
+          "imageUrl": "string",
+          "altText": "string",
+          "countryCode": "string"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "categoryPurchases": {
+    "lastHour": "number",
+    "lastSixHours": "number",
+    "lastTwelveHours": "number",
+    "lastTwentyFourHours": "number",
+    "lastPurchasedTime": "number",
+    "id": "number",
+    "name": "string"
+  },
+  "subcategoryPurchases": {
+    "lastHour": "number",
+    "lastSixHours": "number",
+    "lastTwelveHours": "number",
+    "lastTwentyFourHours": "number",
+    "lastPurchasedTime": "number",
+    "id": "number",
+    "name": "string"
+  }
+}

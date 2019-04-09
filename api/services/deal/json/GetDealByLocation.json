@@ -1,0 +1,406 @@
+{
+  "canonicalUrl": "string",
+  "mainDeal": {
+    "id": "number",
+    "pageTitle": "string",
+    "status": "string",
+    "title": "string",
+    "description": "string",
+    "price": "number",
+    "originalPrice": "number",
+    "priceText": "string",
+    "discount": "number",
+    "discountPercentage": "number",
+    "depositPrice": "number",
+    "priceIndicative": "boolean",
+    "urlPrefix": "string",
+    "soldText": "string",
+    "emailSubject": "string",
+    "printTitle": "string",
+    "closingDate": "number",
+    "expiryDate": "number",
+    "flashDealDate": "number",
+    "webAddress": "string",
+    "originalPriceUrl": "string",
+    "expressBuy": "boolean",
+    "giftable": "boolean",
+    "soldOut": "boolean",
+    "depositAvailable": "boolean",
+    "display": {
+      "discountAmount": "boolean",
+      "quantity": "boolean",
+      "quantityRemaining": "boolean",
+      "endDate": "boolean",
+      "discount": "boolean",
+      "bought": "boolean",
+      "previousDeal": "boolean",
+      "deliveryAddress": "boolean",
+      "business": "boolean",
+      "timer": "boolean",
+      "flashDeal": "boolean",
+      "priceText": "boolean",
+      "lastChance": "boolean"
+    },
+    "currency": "string",
+    "pricePerPerson": "boolean",
+    "headline": "string",
+    "enableBuyClosedDeal": "boolean",
+    "invasiveHealth": "boolean",
+    "open": "boolean",
+    "products": [
+      {
+        "id": "number",
+        "status": "string",
+        "title": "string",
+        "price": "number",
+        "originalPrice": "number",
+        "totalPrice": "number",
+        "discount": "number",
+        "discountPercentage": "number",
+        "maxPurchasableQuantity": "number",
+        "totalRemaining": "number",
+        "purchaseCap": "number",
+        "position": "number",
+        "postagePrice": "number",
+        "totalBought": "number",
+        "rowId": "number",
+        "columnId": "number",
+        "soldOut": "boolean",
+        "displayDiscount": "boolean",
+        "parentProductId": "number",
+        "skuId": "number",
+        "friendlyName": "string",
+        "fulfillmentCost": "number",
+        "hasDeposit": "boolean",
+        "depositProduct": {
+          "id": "number",
+          "price": "number",
+          "postagePrice": "number"
+        }
+      }
+    ],
+    "productDisplay": {
+      "type": "string",
+      "row": {
+        "header": "string",
+        "items": [
+          {
+            "id": "number",
+            "header": "string"
+          }
+        ]
+      },
+      "column": {
+        "header": "string",
+        "items": [
+          {
+            "id": "number",
+            "header": "string"
+          }
+        ]
+      }
+    },
+    "images": [
+      {
+        "id": "number",
+        "caption": "string",
+        "alt": "string",
+        "link": "string",
+        "extension": "string",
+        "height": "number",
+        "width": "number",
+        "mobileImage": "boolean",
+        "status": "string",
+        "imageUrl": "string",
+        "mobileImageUrl": "string"
+      }
+    ],
+    "previewImageThumbUrl": "string",
+    "totalBought": "number",
+    "totalRemaining": "number",
+    "business": {
+      "id": "number",
+      "status": "string",
+      "name": "string",
+      "telephonePrimary": "string",
+      "telephoneSecondary": "string",
+      "telephoneMobile": "string",
+      "url": "string",
+      "openingTimes": "string",
+      "topRated": "boolean",
+      "locationRegionId": "number",
+      "returnAddress": "string",
+      "customerServiceInfo": "string",
+      "mainAddress": {
+        "id": "number",
+        "addressLine1": "string",
+        "addressLine2": "string",
+        "town": "string",
+        "postCode": "string",
+        "latLon": {
+          "lat": "number",
+          "lon": "number"
+        }
+      },
+      "otherAddresses": [
+        {
+          "id": "number",
+          "addressLine1": "string",
+          "addressLine2": "string",
+          "town": "string",
+          "postCode": "string",
+          "latLon": {
+            "lat": "number",
+            "lon": "number"
+          }
+        }
+      ],
+      "image": {
+        "id": "number",
+        "caption": "string",
+        "alt": "string",
+        "link": "string",
+        "extension": "string",
+        "height": "number",
+        "width": "number",
+        "mobileImage": "boolean",
+        "status": "string",
+        "imageUrl": "string",
+        "mobileImageUrl": "string"
+      },
+      "showStorefront": "boolean",
+      "showStorefrontLocation": "boolean",
+      "heroImage": {
+        "id": "number",
+        "caption": "string",
+        "alt": "string",
+        "link": "string",
+        "extension": "string",
+        "height": "number",
+        "width": "number",
+        "mobileImage": "boolean",
+        "status": "string",
+        "imageUrl": "string",
+        "mobileImageUrl": "string"
+      },
+      "logoImage": {
+        "id": "number",
+        "caption": "string",
+        "alt": "string",
+        "link": "string",
+        "extension": "string",
+        "height": "number",
+        "width": "number",
+        "mobileImage": "boolean",
+        "status": "string",
+        "imageUrl": "string",
+        "mobileImageUrl": "string"
+      },
+      "brands": [
+        {
+          "brand": "string",
+          "description": "string",
+          "defaultLocation": {
+            "id": "number",
+            "name": "string",
+            "shortName": "string",
+            "latLon": {
+              "lat": "number",
+              "lon": "number"
+            },
+            "brand": "string",
+            "countryCode": "string",
+            "siteGroup": {
+              "id": "number",
+              "siteGroupCode": "string",
+              "name": "string",
+              "description": "string",
+              "viewSelector": "string",
+              "autoOrder": "boolean",
+              "brand": "string"
+            },
+            "description": "string",
+            "domain": "string",
+            "status": "string"
+          }
+        }
+      ],
+      "categories": [
+        {
+          "id": "number",
+          "name": "string",
+          "shortName": "string",
+          "position": "number",
+          "canonicalPathType": "string",
+          "locations": [
+            {
+              "location": "string",
+              "brand": "string",
+              "text": "string",
+              "imageUrl": "string",
+              "altText": "string",
+              "countryCode": "string"
+            }
+          ]
+        }
+      ],
+      "subcategories": [
+        {
+          "id": "number",
+          "code": "string",
+          "name": "string",
+          "shortName": "string",
+          "affiliateName": "string",
+          "canonicalPathType": "string"
+        }
+      ],
+      "displayName": "string",
+      "urlSlug": "string"
+    },
+    "highlights": [
+      "string"
+    ],
+    "terms": [
+      "string"
+    ],
+    "leadGen": {
+      "number": "string",
+      "displayNumber": "string",
+      "hours": "string"
+    },
+    "redeemLocationUrl": "string",
+    "redeemInstructions": [
+      "string"
+    ],
+    "chainDealId": "number",
+    "chainDealUrlPrefix": "string",
+    "shareUrl": "string",
+    "category": {
+      "id": "number",
+      "name": "string",
+      "shortName": "string",
+      "position": "number",
+      "canonicalPathType": "string",
+      "locations": [
+        {
+          "location": "string",
+          "brand": "string",
+          "text": "string",
+          "imageUrl": "string",
+          "altText": "string",
+          "countryCode": "string"
+        }
+      ]
+    },
+    "subCategory": {
+      "id": "number",
+      "code": "string",
+      "name": "string",
+      "shortName": "string",
+      "affiliateName": "string",
+      "canonicalPathType": "string",
+      "relatedSubCategories": [
+        {
+          "code": "string",
+          "shortName": "string"
+        }
+      ],
+      "locations": [
+        {
+          "location": "string",
+          "brand": "string",
+          "text": "string",
+          "imageUrl": "string",
+          "altText": "string",
+          "countryCode": "string"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "review": "string",
+        "nameLocation": "string",
+        "date": "2017-11-20T08:57:32.223Z",
+        "rating": "number"
+      }
+    ],
+    "reviewTitle": "string",
+    "marketplaceOptions": {
+      "submissionId": "number",
+      "productId": "number",
+      "productName": "string",
+      "description": "string",
+      "notes": "string"
+    },
+    "closedDealRedirectPath": "string"
+  },
+  "deals": [
+    {
+      "id": "number",
+      "urlPrefix": "string",
+      "images": [
+        {
+          "id": "number",
+          "caption": "string",
+          "alt": "string",
+          "link": "string",
+          "extension": "string",
+          "height": "number",
+          "width": "number",
+          "mobileImage": "boolean",
+          "status": "string",
+          "imageUrl": "string",
+          "mobileImageUrl": "string"
+        }
+      ],
+      "priceText": "string",
+      "totalBought": "number",
+      "totalRemaining": "number",
+      "price": "number",
+      "depositPrice": "number",
+      "pricePerPerson": "boolean",
+      "headline": "string",
+      "display": {
+        "discountAmount": "boolean",
+        "quantity": "boolean",
+        "quantityRemaining": "boolean",
+        "endDate": "boolean",
+        "discount": "boolean",
+        "bought": "boolean",
+        "previousDeal": "boolean",
+        "deliveryAddress": "boolean",
+        "business": "boolean",
+        "timer": "boolean",
+        "flashDeal": "boolean",
+        "priceText": "boolean",
+        "lastChance": "boolean"
+      },
+      "priceIndicative": "boolean",
+      "discount": "number",
+      "discountPercentage": "number",
+      "originalPrice": "number",
+      "closingDate": "number",
+      "expiryDate": "number",
+      "flashDealDate": "number",
+      "currency": "string",
+      "soldText": "string",
+      "title": "string",
+      "business": {
+        "image": {
+          "id": "number",
+          "caption": "string",
+          "alt": "string",
+          "link": "string",
+          "extension": "string",
+          "height": "number",
+          "width": "number",
+          "mobileImage": "boolean",
+          "status": "string",
+          "imageUrl": "string",
+          "mobileImageUrl": "string"
+        }
+      },
+      "urlPath": "string"
+    }
+  ]
+}

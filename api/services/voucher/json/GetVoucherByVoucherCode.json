@@ -1,0 +1,9 @@
+{
+  "dealId": "number",
+  "voucherCode": "string",
+  "productId": "number",
+  "productTitle": "string",
+  "orderNumber": "number",
+  "paymentMethod": "string",
+  "deliveryNotificationAvailable": "boolean"
+}

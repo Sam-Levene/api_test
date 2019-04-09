@@ -1,0 +1,95 @@
+{
+  "type": "array",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "items": {
+    "type": "object",
+    "properties": {
+      "webOffer": {
+        "type": "string"
+      },
+      "preOrder": {
+        "type": "string"
+      },
+      "inStock": {
+        "type": "string"
+      },
+      "forSale": {
+        "type": "string"
+      },
+      "id": {
+        "type": "number"
+      },
+      "name": {
+        "type": "string"
+      },
+      "description": {
+        "type": "string"
+      },
+      "promoText": {
+        "type": "string"
+      },
+      "category": {
+        "type": "string"
+      },
+      "lang": {
+        "type": "string"
+      },
+      "pUrl": {
+        "type": "string"
+      },
+      "imgUrl": {
+        "type": "string"
+      },
+      "validFrom": {
+        "type": "string"
+      },
+      "validTo": {
+        "type": "string"
+      },
+      "currency": {
+        "type": "string"
+      },
+      "price": {
+        "type": "object",
+        "properties": {
+          "actualPrice": {
+            "type": "string"
+          },
+          "originalPrice": {
+            "type": "string"
+          },
+          "storePrice": {
+            "type": "string"
+          }
+        }
+      },
+      "delCost": {
+        "type": "string"
+      },
+      "stockQuantity": {
+        "type": "string"
+      },
+      "condition": {
+        "type": "string"
+      },
+      "cg": {
+        "type": "string"
+      },
+      "spec": {
+        "type": "string"
+      },
+      "warranty": {
+        "type": "string"
+      },
+      "ean": {
+        "type": "string"
+      },
+      "pType": {
+        "type": "string"
+      },
+      "brand": {
+        "type": "string"
+      }
+    }
+  }
+}

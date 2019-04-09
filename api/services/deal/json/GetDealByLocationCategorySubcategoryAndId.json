@@ -1,0 +1,1266 @@
+{
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "properties": {
+    "canonicalUrl": {
+      "type": "string"
+    },
+    "mainDeal": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "number"
+        },
+        "pageTitle": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "price": {
+          "type": "number"
+        },
+        "originalPrice": {
+          "type": "number"
+        },
+        "priceText": {
+          "type": "string"
+        },
+        "discount": {
+          "type": "number"
+        },
+        "discountPercentage": {
+          "type": "number"
+        },
+        "depositPrice": {
+          "type": "number"
+        },
+        "priceIndicative": {
+          "type": "boolean"
+        },
+        "urlPrefix": {
+          "type": "string"
+        },
+        "soldText": {
+          "type": "string"
+        },
+        "emailSubject": {
+          "type": "string"
+        },
+        "printTitle": {
+          "type": "string"
+        },
+        "closingDate": {
+          "type": "number"
+        },
+        "expiryDate": {
+          "type": "number"
+        },
+        "flashDealDate": {
+          "type": "number"
+        },
+        "webAddress": {
+          "type": "string"
+        },
+        "originalPriceUrl": {
+          "type": "string"
+        },
+        "expressBuy": {
+          "type": "boolean"
+        },
+        "giftable": {
+          "type": "boolean"
+        },
+        "soldOut": {
+          "type": "boolean"
+        },
+        "depositAvailable": {
+          "type": "boolean"
+        },
+        "display": {
+          "type": "object",
+          "properties": {
+            "discountAmount": {
+              "type": "boolean"
+            },
+            "quantity": {
+              "type": "boolean"
+            },
+            "quantityRemaining": {
+              "type": "boolean"
+            },
+            "endDate": {
+              "type": "boolean"
+            },
+            "discount": {
+              "type": "boolean"
+            },
+            "bought": {
+              "type": "boolean"
+            },
+            "previousDeal": {
+              "type": "boolean"
+            },
+            "deliveryAddress": {
+              "type": "boolean"
+            },
+            "business": {
+              "type": "boolean"
+            },
+            "timer": {
+              "type": "boolean"
+            },
+            "flashDeal": {
+              "type": "boolean"
+            },
+            "priceText": {
+              "type": "boolean"
+            },
+            "lastChance": {
+              "type": "boolean"
+            }
+          }
+        },
+        "currency": {
+          "type": "string"
+        },
+        "pricePerPerson": {
+          "type": "boolean"
+        },
+        "headline": {
+          "type": "string"
+        },
+        "enableBuyClosedDeal": {
+          "type": "boolean"
+        },
+        "invasiveHealth": {
+          "type": "boolean"
+        },
+        "open": {
+          "type": "boolean"
+        },
+        "products": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "status": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "price": {
+                "type": "number"
+              },
+              "originalPrice": {
+                "type": "number"
+              },
+              "totalPrice": {
+                "type": "number"
+              },
+              "discount": {
+                "type": "number"
+              },
+              "discountPercentage": {
+                "type": "number"
+              },
+              "maxPurchasableQuantity": {
+                "type": "number"
+              },
+              "totalRemaining": {
+                "type": "number"
+              },
+              "purchaseCap": {
+                "type": "number"
+              },
+              "position": {
+                "type": "number"
+              },
+              "postagePrice": {
+                "type": "number"
+              },
+              "adminFee": {
+                "type": "number"
+              },
+              "totalBought": {
+                "type": "number"
+              },
+              "rowId": {
+                "type": "number"
+              },
+              "columnId": {
+                "type": "number"
+              },
+              "soldOut": {
+                "type": "boolean"
+              },
+              "displayDiscount": {
+                "type": "boolean"
+              },
+              "parentProductId": {
+                "type": "number"
+              },
+              "skuId": {
+                "type": "number"
+              },
+              "friendlyName": {
+                "type": "string"
+              },
+              "fulfillmentCost": {
+                "type": "number"
+              },
+              "hasDeposit": {
+                "type": "boolean"
+              },
+              "depositProduct": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "number"
+                  },
+                  "price": {
+                    "type": "number"
+                  },
+                  "postagePrice": {
+                    "type": "number"
+                  }
+                }
+              },
+              "merchant": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "number"
+                  },
+                  "accountId": {
+                    "type": "number"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "vatAreaRate": {
+                    "type": "number"
+                  },
+                  "vatNumber": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "productDisplay": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "row": {
+              "type": "object",
+              "properties": {
+                "header": {
+                  "type": "string"
+                },
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "number"
+                      },
+                      "header": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "column": {
+              "type": "object",
+              "properties": {
+                "header": {
+                  "type": "string"
+                },
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "number"
+                      },
+                      "header": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "images": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "caption": {
+                "type": "string"
+              },
+              "alt": {
+                "type": "string"
+              },
+              "link": {
+                "type": "string"
+              },
+              "extension": {
+                "type": "string"
+              },
+              "height": {
+                "type": "number"
+              },
+              "width": {
+                "type": "number"
+              },
+              "mobileImage": {
+                "type": "boolean"
+              },
+              "status": {
+                "type": "string"
+              },
+              "imageUrl": {
+                "type": "string"
+              },
+              "mobileImageUrl": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "previewImageThumbUrl": {
+          "type": "string"
+        },
+        "totalBought": {
+          "type": "number"
+        },
+        "totalRemaining": {
+          "type": "number"
+        },
+        "business": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "number"
+            },
+            "status": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "telephonePrimary": {
+              "type": "string"
+            },
+            "telephoneSecondary": {
+              "type": "string"
+            },
+            "telephoneMobile": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            },
+            "openingTimes": {
+              "type": "string"
+            },
+            "topRated": {
+              "type": "boolean"
+            },
+            "locationRegionId": {
+              "type": "number"
+            },
+            "returnAddress": {
+              "type": "string"
+            },
+            "customerServiceInfo": {
+              "type": "string"
+            },
+            "mainAddress": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "number"
+                },
+                "addressLine1": {
+                  "type": "string"
+                },
+                "addressLine2": {
+                  "type": "string"
+                },
+                "town": {
+                  "type": "string"
+                },
+                "postCode": {
+                  "type": "string"
+                },
+                "latLon": {
+                  "type": "object",
+                  "properties": {
+                    "lat": {
+                      "type": "number"
+                    },
+                    "lon": {
+                      "type": "number"
+                    }
+                  }
+                }
+              }
+            },
+            "otherAddresses": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "number"
+                  },
+                  "addressLine1": {
+                    "type": "string"
+                  },
+                  "addressLine2": {
+                    "type": "string"
+                  },
+                  "town": {
+                    "type": "string"
+                  },
+                  "postCode": {
+                    "type": "string"
+                  },
+                  "latLon": {
+                    "type": "object",
+                    "properties": {
+                      "lat": {
+                        "type": "number"
+                      },
+                      "lon": {
+                        "type": "number"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "image": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "number"
+                },
+                "caption": {
+                  "type": "string"
+                },
+                "alt": {
+                  "type": "string"
+                },
+                "link": {
+                  "type": "string"
+                },
+                "extension": {
+                  "type": "string"
+                },
+                "height": {
+                  "type": "number"
+                },
+                "width": {
+                  "type": "number"
+                },
+                "mobileImage": {
+                  "type": "boolean"
+                },
+                "status": {
+                  "type": "string"
+                },
+                "imageUrl": {
+                  "type": "string"
+                },
+                "mobileImageUrl": {
+                  "type": "string"
+                }
+              }
+            },
+            "showStorefront": {
+              "type": "boolean"
+            },
+            "showStorefrontLocation": {
+              "type": "boolean"
+            },
+            "heroImage": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "number"
+                },
+                "caption": {
+                  "type": "string"
+                },
+                "alt": {
+                  "type": "string"
+                },
+                "link": {
+                  "type": "string"
+                },
+                "extension": {
+                  "type": "string"
+                },
+                "height": {
+                  "type": "number"
+                },
+                "width": {
+                  "type": "number"
+                },
+                "mobileImage": {
+                  "type": "boolean"
+                },
+                "status": {
+                  "type": "string"
+                },
+                "imageUrl": {
+                  "type": "string"
+                },
+                "mobileImageUrl": {
+                  "type": "string"
+                }
+              }
+            },
+            "logoImage": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "number"
+                },
+                "caption": {
+                  "type": "string"
+                },
+                "alt": {
+                  "type": "string"
+                },
+                "link": {
+                  "type": "string"
+                },
+                "extension": {
+                  "type": "string"
+                },
+                "height": {
+                  "type": "number"
+                },
+                "width": {
+                  "type": "number"
+                },
+                "mobileImage": {
+                  "type": "boolean"
+                },
+                "status": {
+                  "type": "string"
+                },
+                "imageUrl": {
+                  "type": "string"
+                },
+                "mobileImageUrl": {
+                  "type": "string"
+                }
+              }
+            },
+            "brands": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "brand": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "defaultLocation": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "number"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "shortName": {
+                        "type": "string"
+                      },
+                      "latLon": {
+                        "type": "object",
+                        "properties": {
+                          "lat": {
+                            "type": "number"
+                          },
+                          "lon": {
+                            "type": "number"
+                          }
+                        }
+                      },
+                      "brand": {
+                        "type": "string"
+                      },
+                      "countryCode": {
+                        "type": "string"
+                      },
+                      "siteGroup": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "number"
+                          },
+                          "siteGroupCode": {
+                            "type": "string"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "description": {
+                            "type": "string"
+                          },
+                          "viewSelector": {
+                            "type": "string"
+                          },
+                          "autoOrder": {
+                            "type": "boolean"
+                          },
+                          "brand": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "description": {
+                        "type": "string"
+                      },
+                      "domain": {
+                        "type": "string"
+                      },
+                      "status": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "categories": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "number"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "shortName": {
+                    "type": "string"
+                  },
+                  "position": {
+                    "type": "number"
+                  },
+                  "canonicalPathType": {
+                    "type": "string"
+                  },
+                  "locations": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "location": {
+                          "type": "string"
+                        },
+                        "brand": {
+                          "type": "string"
+                        },
+                        "text": {
+                          "type": "string"
+                        },
+                        "imageUrl": {
+                          "type": "string"
+                        },
+                        "altText": {
+                          "type": "string"
+                        },
+                        "countryCode": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "subcategories": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "number"
+                  },
+                  "code": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "shortName": {
+                    "type": "string"
+                  },
+                  "affiliateName": {
+                    "type": "string"
+                  },
+                  "canonicalPathType": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "displayName": {
+              "type": "string"
+            },
+            "urlSlug": {
+              "type": "string"
+            }
+          }
+        },
+        "highlights": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "terms": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "leadGen": {
+          "type": "object",
+          "properties": {
+            "number": {
+              "type": "string"
+            },
+            "displayNumber": {
+              "type": "string"
+            },
+            "hours": {
+              "type": "string"
+            }
+          }
+        },
+        "redeemLocationUrl": {
+          "type": "string"
+        },
+        "redeemInstructions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "chainDealId": {
+          "type": "number"
+        },
+        "chainDealUrlPrefix": {
+          "type": "string"
+        },
+        "shareUrl": {
+          "type": "string"
+        },
+        "category": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "number"
+            },
+            "name": {
+              "type": "string"
+            },
+            "shortName": {
+              "type": "string"
+            },
+            "position": {
+              "type": "number"
+            },
+            "canonicalPathType": {
+              "type": "string"
+            },
+            "locations": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "location": {
+                    "type": "string"
+                  },
+                  "brand": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "imageUrl": {
+                    "type": "string"
+                  },
+                  "altText": {
+                    "type": "string"
+                  },
+                  "countryCode": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "subCategory": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "number"
+            },
+            "code": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "shortName": {
+              "type": "string"
+            },
+            "affiliateName": {
+              "type": "string"
+            },
+            "canonicalPathType": {
+              "type": "string"
+            },
+            "relatedSubCategories": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "code": {
+                    "type": "string"
+                  },
+                  "shortName": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "locations": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "location": {
+                    "type": "string"
+                  },
+                  "brand": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "imageUrl": {
+                    "type": "string"
+                  },
+                  "altText": {
+                    "type": "string"
+                  },
+                  "countryCode": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "reviews": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "review": {
+                "type": "string"
+              },
+              "nameLocation": {
+                "type": "string"
+              },
+              "date": {
+                "type": "string"
+              },
+              "rating": {
+                "type": "number"
+              }
+            }
+          }
+        },
+        "reviewTitle": {
+          "type": "string"
+        },
+        "marketplaceOptions": {
+          "type": "object",
+          "properties": {
+            "submissionId": {
+              "type": "number"
+            },
+            "productId": {
+              "type": "number"
+            },
+            "productName": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "notes": {
+              "type": "string"
+            }
+          }
+        },
+        "closedDealRedirectPath": {
+          "type": "string"
+        },
+        "brands": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "brand": {
+                "type": "string"
+              },
+              "location": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "number"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "shortName": {
+                    "type": "string"
+                  },
+                  "latLon": {
+                    "type": "object",
+                    "properties": {
+                      "lat": {
+                        "type": "number"
+                      },
+                      "lon": {
+                        "type": "number"
+                      }
+                    }
+                  },
+                  "countryCode": {
+                    "type": "string"
+                  }
+                }
+              },
+              "scheduledLocations": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "location": {
+                      "type": "string"
+                    },
+                    "mainDeal": {
+                      "type": "boolean"
+                    },
+                    "position": {
+                      "type": "number"
+                    },
+                    "brand": {
+                      "type": "string"
+                    },
+                    "countryCode": {
+                      "type": "string"
+                    },
+                    "startDate": {
+                      "type": "number"
+                    },
+                    "mainDealStartDate": {
+                      "type": "number"
+                    },
+                    "categoryMainDealActiveDates": {
+                      "type": "array",
+                      "items": {
+                        "type": "number"
+                      }
+                    }
+                  }
+                }
+              },
+              "searchTags": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "number"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "shortName": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "orderWeight": {
+                "type": "number"
+              },
+              "startDate": {
+                "type": "number"
+              },
+              "mainDealStartDate": {
+                "type": "number"
+              },
+              "pageTitle": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "headline": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "deals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "urlPrefix": {
+            "type": "string"
+          },
+          "images": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "number"
+                },
+                "caption": {
+                  "type": "string"
+                },
+                "alt": {
+                  "type": "string"
+                },
+                "link": {
+                  "type": "string"
+                },
+                "extension": {
+                  "type": "string"
+                },
+                "height": {
+                  "type": "number"
+                },
+                "width": {
+                  "type": "number"
+                },
+                "mobileImage": {
+                  "type": "boolean"
+                },
+                "status": {
+                  "type": "string"
+                },
+                "imageUrl": {
+                  "type": "string"
+                },
+                "mobileImageUrl": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "priceText": {
+            "type": "string"
+          },
+          "totalBought": {
+            "type": "number"
+          },
+          "totalRemaining": {
+            "type": "number"
+          },
+          "price": {
+            "type": "number"
+          },
+          "depositPrice": {
+            "type": "number"
+          },
+          "pricePerPerson": {
+            "type": "boolean"
+          },
+          "headline": {
+            "type": "string"
+          },
+          "display": {
+            "type": "object",
+            "properties": {
+              "discountAmount": {
+                "type": "boolean"
+              },
+              "quantity": {
+                "type": "boolean"
+              },
+              "quantityRemaining": {
+                "type": "boolean"
+              },
+              "endDate": {
+                "type": "boolean"
+              },
+              "discount": {
+                "type": "boolean"
+              },
+              "bought": {
+                "type": "boolean"
+              },
+              "previousDeal": {
+                "type": "boolean"
+              },
+              "deliveryAddress": {
+                "type": "boolean"
+              },
+              "business": {
+                "type": "boolean"
+              },
+              "timer": {
+                "type": "boolean"
+              },
+              "flashDeal": {
+                "type": "boolean"
+              },
+              "priceText": {
+                "type": "boolean"
+              },
+              "lastChance": {
+                "type": "boolean"
+              }
+            }
+          },
+          "priceIndicative": {
+            "type": "boolean"
+          },
+          "discount": {
+            "type": "number"
+          },
+          "discountPercentage": {
+            "type": "number"
+          },
+          "originalPrice": {
+            "type": "number"
+          },
+          "closingDate": {
+            "type": "number"
+          },
+          "expiryDate": {
+            "type": "number"
+          },
+          "flashDealDate": {
+            "type": "number"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "soldText": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "business": {
+            "type": "object",
+            "properties": {
+              "image": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "number"
+                  },
+                  "caption": {
+                    "type": "string"
+                  },
+                  "alt": {
+                    "type": "string"
+                  },
+                  "link": {
+                    "type": "string"
+                  },
+                  "extension": {
+                    "type": "string"
+                  },
+                  "height": {
+                    "type": "number"
+                  },
+                  "width": {
+                    "type": "number"
+                  },
+                  "mobileImage": {
+                    "type": "boolean"
+                  },
+                  "status": {
+                    "type": "string"
+                  },
+                  "imageUrl": {
+                    "type": "string"
+                  },
+                  "mobileImageUrl": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "urlPath": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

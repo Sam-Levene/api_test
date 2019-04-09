@@ -1,0 +1,280 @@
+{
+  "canonicalUrl": "string",
+  "business": {
+    "id": "number",
+    "status": "string",
+    "name": "string",
+    "telephonePrimary": "string",
+    "telephoneSecondary": "string",
+    "telephoneMobile": "string",
+    "url": "string",
+    "openingTimes": "string",
+    "topRated": "boolean",
+    "locationRegionId": "number",
+    "returnAddress": "string",
+    "customerServiceInfo": "string",
+    "mainAddress": {
+      "id": "number",
+      "addressLine1": "string",
+      "addressLine2": "string",
+      "town": "string",
+      "postCode": "string",
+      "latLon": {
+        "lat": "number",
+        "lon": "number"
+      }
+    },
+    "otherAddresses": [
+      {
+        "id": "number",
+        "addressLine1": "string",
+        "addressLine2": "string",
+        "town": "string",
+        "postCode": "string",
+        "latLon": {
+          "lat": "number",
+          "lon": "number"
+        }
+      }
+    ],
+    "image": {
+      "id": "number",
+      "caption": "string",
+      "alt": "string",
+      "link": "string",
+      "extension": "string",
+      "height": "number",
+      "width": "number",
+      "mobileImage": "boolean",
+      "status": "string",
+      "imageUrl": "string",
+      "mobileImageUrl": "string"
+    },
+    "showStorefront": "boolean",
+    "showStorefrontLocation": "boolean",
+    "heroImage": {
+      "id": "number",
+      "caption": "string",
+      "alt": "string",
+      "link": "string",
+      "extension": "string",
+      "height": "number",
+      "width": "number",
+      "mobileImage": "boolean",
+      "status": "string",
+      "imageUrl": "string",
+      "mobileImageUrl": "string"
+    },
+    "logoImage": {
+      "id": "number",
+      "caption": "string",
+      "alt": "string",
+      "link": "string",
+      "extension": "string",
+      "height": "number",
+      "width": "number",
+      "mobileImage": "boolean",
+      "status": "string",
+      "imageUrl": "string",
+      "mobileImageUrl": "string"
+    },
+    "brands": [
+      {
+        "brand": "string",
+        "description": "string",
+        "defaultLocation": {
+          "id": "number",
+          "name": "string",
+          "shortName": "string",
+          "latLon": {
+            "lat": "number",
+            "lon": "number"
+          },
+          "brand": "string",
+          "countryCode": "string",
+          "siteGroup": {
+            "id": "number",
+            "siteGroupCode": "string",
+            "name": "string",
+            "description": "string",
+            "viewSelector": "string",
+            "autoOrder": "boolean",
+            "brand": "string"
+          },
+          "description": "string",
+          "domain": "string",
+          "status": "string"
+        }
+      }
+    ],
+    "categories": [
+      {
+        "id": "number",
+        "name": "string",
+        "shortName": "string",
+        "position": "number",
+        "canonicalPathType": "string",
+        "locations": [
+          {
+            "location": "string",
+            "brand": "string",
+            "text": "string",
+            "imageUrl": "string",
+            "altText": "string",
+            "countryCode": "string"
+          }
+        ]
+      }
+    ],
+    "subcategories": [
+      {
+        "id": "number",
+        "code": "string",
+        "name": "string",
+        "shortName": "string",
+        "affiliateName": "string",
+        "canonicalPathType": "string"
+      }
+    ],
+    "displayName": "string",
+    "urlSlug": "string"
+  },
+  "deals": [
+    {
+      "id": "number",
+      "urlPrefix": "string",
+      "images": [
+        {
+          "id": "number",
+          "caption": "string",
+          "alt": "string",
+          "link": "string",
+          "extension": "string",
+          "height": "number",
+          "width": "number",
+          "mobileImage": "boolean",
+          "status": "string",
+          "imageUrl": "string",
+          "mobileImageUrl": "string"
+        }
+      ],
+      "priceText": "string",
+      "totalBought": "number",
+      "totalRemaining": "number",
+      "price": "number",
+      "depositPrice": "number",
+      "pricePerPerson": "boolean",
+      "headline": "string",
+      "display": {
+        "discountAmount": "boolean",
+        "quantity": "boolean",
+        "quantityRemaining": "boolean",
+        "endDate": "boolean",
+        "discount": "boolean",
+        "bought": "boolean",
+        "previousDeal": "boolean",
+        "deliveryAddress": "boolean",
+        "business": "boolean",
+        "timer": "boolean",
+        "flashDeal": "boolean",
+        "priceText": "boolean",
+        "lastChance": "boolean"
+      },
+      "priceIndicative": "boolean",
+      "discount": "number",
+      "discountPercentage": "number",
+      "originalPrice": "number",
+      "closingDate": "number",
+      "expiryDate": "number",
+      "flashDealDate": "number",
+      "currency": "string",
+      "soldText": "string",
+      "title": "string",
+      "business": {
+        "image": {
+          "id": "number",
+          "caption": "string",
+          "alt": "string",
+          "link": "string",
+          "extension": "string",
+          "height": "number",
+          "width": "number",
+          "mobileImage": "boolean",
+          "status": "string",
+          "imageUrl": "string",
+          "mobileImageUrl": "string"
+        }
+      },
+      "urlPath": "string"
+    }
+  ],
+  "similarDeals": [
+    {
+      "id": "number",
+      "urlPrefix": "string",
+      "images": [
+        {
+          "id": "number",
+          "caption": "string",
+          "alt": "string",
+          "link": "string",
+          "extension": "string",
+          "height": "number",
+          "width": "number",
+          "mobileImage": "boolean",
+          "status": "string",
+          "imageUrl": "string",
+          "mobileImageUrl": "string"
+        }
+      ],
+      "priceText": "string",
+      "totalBought": "number",
+      "totalRemaining": "number",
+      "price": "number",
+      "depositPrice": "number",
+      "pricePerPerson": "boolean",
+      "headline": "string",
+      "display": {
+        "discountAmount": "boolean",
+        "quantity": "boolean",
+        "quantityRemaining": "boolean",
+        "endDate": "boolean",
+        "discount": "boolean",
+        "bought": "boolean",
+        "previousDeal": "boolean",
+        "deliveryAddress": "boolean",
+        "business": "boolean",
+        "timer": "boolean",
+        "flashDeal": "boolean",
+        "priceText": "boolean",
+        "lastChance": "boolean"
+      },
+      "priceIndicative": "boolean",
+      "discount": "number",
+      "discountPercentage": "number",
+      "originalPrice": "number",
+      "closingDate": "number",
+      "expiryDate": "number",
+      "flashDealDate": "number",
+      "currency": "string",
+      "soldText": "string",
+      "title": "string",
+      "business": {
+        "image": {
+          "id": "number",
+          "caption": "string",
+          "alt": "string",
+          "link": "string",
+          "extension": "string",
+          "height": "number",
+          "width": "number",
+          "mobileImage": "boolean",
+          "status": "string",
+          "imageUrl": "string",
+          "mobileImageUrl": "string"
+        }
+      },
+      "urlPath": "string"
+    }
+  ]
+}
