@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "docgen": "jsdoc api -r -t node_modules/docdash",
-    "poc": "env ENVIRONMENT=dummy.restapiexample.com mocha ./test/testpoc.js --reporter mochawesome"
+    "poc": "env ENVIRONMENT=dummy.restapiexample.com mocha ./test/test_poc.js --reporter mochawesome"
   },
   "dependencies": {
     "@pact-foundation/pact": "^8.2.0",
