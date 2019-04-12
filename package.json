@@ -42,5 +42,8 @@
     "api"
   ],
   "author": "Samuel Levene",
-  "license": "MIT"
+  "license": "MIT",
+  "config": {
+        "pact_do_not_track": true
+    }
 }
