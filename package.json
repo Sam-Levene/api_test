@@ -1,12 +1,12 @@
 {
-  "name": "Api_Proof_Of_Concept",
+  "name": "API_Proof_Of_Concept",
   "version": "0.0.1",
   "scripts": {
     "docgen": "jsdoc api -r -t node_modules/docdash",
     "poc": "env ENVIRONMENT=dummy.restapiexample.com mocha ./test/testpoc.js --reporter mochawesome"
   },
-
   "dependencies": {
+    "@pact-foundation/pact": "^8.2.0",
     "babel-polyfill": "^6.26.0",
     "babel-preset-stage-0": "^6.24.1",
     "debug": "~2.6.0",
@@ -40,9 +40,7 @@
   },
   "keywords": [
     "api",
-    "wowcher"
   ],
-  "author": "PPL Automation Team",
-  "license": "MIT",
-  "homepage": "https://bitbucket.org/wowcher/public_api_tests#readme"
+  "author": "Samuel Levene",
+  "license": "MIT"
 }
