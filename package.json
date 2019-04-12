@@ -30,7 +30,6 @@
     "jsdoc": "^3.5.5",
     "mochawesome": "^3.1.1"
   },
-  "description": "To install and run the test simply follow these two steps:",
   "main": "api/services",
   "directories": {
     "test": "test"
