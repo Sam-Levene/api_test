@@ -1,4 +1,5 @@
 const https = require('https');
+const http = require('http');
 let statusCode = '';
 let statusMessage = '';
 let responseHeaders = '';
@@ -16,36 +17,66 @@ class HttpsRequest {
     static get(options) {
         return new Promise(function (resolve, reject) {
             const header = options.toJson();
-            let request = https.request(JSON.parse(header), (res) => {
-                statusCode = res.statusCode;
-                statusMessage = res.statusMessage;
-
-                let data = '';
-                res.on('data', (d) => {
-                    data += d;
-                });
-                res.on('end', () => {
-                    if(data === "") {
-                        data = "{}";
-                    }
-                    try {
-                        let result = JSON.parse(data);
-                        resolve(result);
-                    } catch (error) {
-                        resolve("{}");
-                    }
-                });
-            });
-
-            request.on('error', (e) => {
-                console.error(e);
-            });
-
-            request.end();
-
+            if (options.host.indexOf("https://") > -1) {
+	            let request = https.request(JSON.parse(header), (res) => {
+	                statusCode = res.statusCode;
+	                statusMessage = res.statusMessage;
+	
+	                let data = '';
+	                res.on('data', (d) => {
+	                    data += d;
+	                });
+	                res.on('end', () => {
+	                    if(data === "") {
+	                        data = "{}";
+	                    }
+	                    try {
+	                        let result = JSON.parse(data);
+	                        resolve(result);
+	                    } catch (error) {
+	                        resolve("{}");
+	                    }
+	                });
+	            });
+	
+	            request.on('error', (e) => {
+	                console.error(e);
+	            });
+	
+	            request.end();
+            }
+            else {
+            	 let request = http.request(JSON.parse(header), (res) => {
+ 	                statusCode = res.statusCode;
+ 	                statusMessage = res.statusMessage;
+ 	
+ 	                let data = '';
+ 	                res.on('data', (d) => {
+ 	                    data += d;
+ 	                });
+ 	                res.on('end', () => {
+ 	                    if(data === "") {
+ 	                        data = "{}";
+ 	                    }
+ 	                    try {
+ 	                        let result = JSON.parse(data);
+ 	                        resolve(result);
+ 	                    } catch (error) {
+ 	                        resolve("{}");
+ 	                    }
+ 	                });
+ 	            });
+ 	
+ 	            request.on('error', (e) => {
+ 	                console.error(e);
+ 	            });
+ 	
+ 	            request.end();
+            }
         }).catch(error => {
             console.log(error);
         });
+    
     }
     /**
      * HTTP POST
@@ -54,39 +85,75 @@ class HttpsRequest {
      * @returns {Promise<JSON>}
      */
     static post(options, requestBody) {
-        return new Promise(function (resolve, reject) {
-            const header = options.toJson();
-            let request = https.request(JSON.parse(header), (res) => {
-                statusCode = res.statusCode;
-                statusMessage = res.statusMessage;
-                responseHeaders = res.headers;
-                let data = '';
-
-                res.on('data', (d) => {
-                    data += d;
-                });
-
-                res.on('end', () => {
-                    if(data === "") {
-                        data = "{}";
-                    }
-                    try{
-                        let result = JSON.parse(data);
-                        resolve(result);
-                    } catch (error) {
-                        console.log(error);
-                        resolve("{}");
-                    }
-                });
-            });
-
-            request.on('error', (e) => {
-                console.error(e);
-            });
-
-            request.write(requestBody);
-            request.end();
-
+    	return new Promise(function (resolve, reject) {
+    		if (options.host.indexOf("https://") > -1) {
+	            const header = options.toJson();
+	            let request = https.request(JSON.parse(header), (res) => {
+	                statusCode = res.statusCode;
+	                statusMessage = res.statusMessage;
+	                responseHeaders = res.headers;
+	                let data = '';
+	
+	                res.on('data', (d) => {
+	                    data += d;
+	                });
+	
+	                res.on('end', () => {
+	                    if(data === "") {
+	                        data = "{}";
+	                    }
+	                    try{
+	                        let result = JSON.parse(data);
+	                        resolve(result);
+	                    } catch (error) {
+	                        console.log(error);
+	                        resolve("{}");
+	                    }
+	                });
+	            });
+	        	 
+	
+	            request.on('error', (e) => {
+	                console.error(e);
+	            });
+	
+	            request.write(requestBody);
+	            request.end();
+	        }
+    		else {
+    			const header = options.toJson();
+	            let request = http.request(JSON.parse(header), (res) => {
+	                statusCode = res.statusCode;
+	                statusMessage = res.statusMessage;
+	                responseHeaders = res.headers;
+	                let data = '';
+	
+	                res.on('data', (d) => {
+	                    data += d;
+	                });
+	
+	                res.on('end', () => {
+	                    if(data === "") {
+	                        data = "{}";
+	                    }
+	                    try{
+	                        let result = JSON.parse(data);
+	                        resolve(result);
+	                    } catch (error) {
+	                        console.log(error);
+	                        resolve("{}");
+	                    }
+	                });
+	            });
+	        	 
+	
+	            request.on('error', (e) => {
+	                console.error(e);
+	            });
+	
+	            request.write(requestBody);
+	            request.end();
+    		}
         }).catch(error => {
             console.log(error);
         });
@@ -99,36 +166,70 @@ class HttpsRequest {
      */
     static put(options, requestBody) {
         return new Promise(function (resolve, reject) {
-            const header = options.toJson();
-            let request = https.request(JSON.parse(header), (res) => {
-                statusCode = res.statusCode;
-                statusMessage = res.statusMessage;
-                let data = '';
-
-                res.on('data', (d) => {
-                    data += d;
-                });
-
-                res.on('end', () => {
-                    if(data === "") {
-                        data = "{}";
-                    }
-
-                    try{
-                        let result = JSON.parse(data);
-                        resolve(result);
-                    } catch (error) {
-                        //console.log(error);
-                        resolve("{}");
-                    }
-                });
-            });
-
-            request.on('error', (e) => {
-                console.error(e);
-            });
-            request.write(requestBody);
-            request.end();
+        	if (options.host.indexOf("https://") > -1) {
+	            const header = options.toJson();
+	            let request = https.request(JSON.parse(header), (res) => {
+	                statusCode = res.statusCode;
+	                statusMessage = res.statusMessage;
+	                let data = '';
+	
+	                res.on('data', (d) => {
+	                    data += d;
+	                });
+	
+	                res.on('end', () => {
+	                    if(data === "") {
+	                        data = "{}";
+	                    }
+	
+	                    try{
+	                        let result = JSON.parse(data);
+	                        resolve(result);
+	                    } catch (error) {
+	                        //console.log(error);
+	                        resolve("{}");
+	                    }
+	                });
+	            });
+	
+	            request.on('error', (e) => {
+	                console.error(e);
+	            });
+	            request.write(requestBody);
+	            request.end();
+        	}
+        	else {
+        		const header = options.toJson();
+	            let request = http.request(JSON.parse(header), (res) => {
+	                statusCode = res.statusCode;
+	                statusMessage = res.statusMessage;
+	                let data = '';
+	
+	                res.on('data', (d) => {
+	                    data += d;
+	                });
+	
+	                res.on('end', () => {
+	                    if(data === "") {
+	                        data = "{}";
+	                    }
+	
+	                    try{
+	                        let result = JSON.parse(data);
+	                        resolve(result);
+	                    } catch (error) {
+	                        //console.log(error);
+	                        resolve("{}");
+	                    }
+	                });
+	            });
+	
+	            request.on('error', (e) => {
+	                console.error(e);
+	            });
+	            request.write(requestBody);
+	            request.end();
+        	}
 
         }).catch(error => {
             console.log(error);
@@ -142,37 +243,72 @@ class HttpsRequest {
      */
     static patch(options, requestBody) {
         return new Promise(function (resolve, reject) {
-            const header = options.toJson();
-            let request = https.request(JSON.parse(header), (res) => {
-                statusCode = res.statusCode;
-                statusMessage = res.statusMessage;
-                responseHeaders = res.headers;
-                let data = '';
-
-                res.on('data', (d) => {
-                    data += d;
-                });
-
-                res.on('end', () => {
-                    if(data === "") {
-                        data = "{}";
-                    }
-
-                    try{
-                        let result = JSON.parse(data);
-                        resolve(result);
-                    } catch (error) {
-                        //console.log(error);
-                        resolve("{}");
-                    }
-                });
-            });
-
-            request.on('error', (e) => {
-                console.error(e);
-            });
-            request.write(requestBody);
-            request.end();
+        	if (options.host.indexOf("https://") > -1) {
+	            const header = options.toJson();
+	            let request = https.request(JSON.parse(header), (res) => {
+	                statusCode = res.statusCode;
+	                statusMessage = res.statusMessage;
+	                responseHeaders = res.headers;
+	                let data = '';
+	
+	                res.on('data', (d) => {
+	                    data += d;
+	                });
+	
+	                res.on('end', () => {
+	                    if(data === "") {
+	                        data = "{}";
+	                    }
+	
+	                    try{
+	                        let result = JSON.parse(data);
+	                        resolve(result);
+	                    } catch (error) {
+	                        //console.log(error);
+	                        resolve("{}");
+	                    }
+	                });
+	            });
+	
+	            request.on('error', (e) => {
+	                console.error(e);
+	            });
+	            request.write(requestBody);
+	            request.end();
+        	}
+        	else {
+	            const header = options.toJson();
+	            let request = http.request(JSON.parse(header), (res) => {
+	                statusCode = res.statusCode;
+	                statusMessage = res.statusMessage;
+	                responseHeaders = res.headers;
+	                let data = '';
+	
+	                res.on('data', (d) => {
+	                    data += d;
+	                });
+	
+	                res.on('end', () => {
+	                    if(data === "") {
+	                        data = "{}";
+	                    }
+	
+	                    try{
+	                        let result = JSON.parse(data);
+	                        resolve(result);
+	                    } catch (error) {
+	                        //console.log(error);
+	                        resolve("{}");
+	                    }
+	                });
+	            });
+	
+	            request.on('error', (e) => {
+	                console.error(e);
+	            });
+	            request.write(requestBody);
+	            request.end();
+        	}
 
         }).catch(error => {
             console.log(error);
@@ -185,36 +321,68 @@ class HttpsRequest {
      */
     static delete(options) {
         return new Promise(function (resolve, reject) {
-            const header = options.toJson();
-            const request = https.request(JSON.parse(header), (res) => {
-                statusCode = res.statusCode;
-                statusMessage = res.statusMessage;
-                let data = '';
-
-                res.on('data', (d) => {
-                    data += d;
-                });
-
-                res.on('end', () => {
-                    if(data === "") {
-                        data = "{}";
-                    }
-
-                    try{
-                        let result = JSON.parse(data);
-                        resolve(result);
-                    } catch (error) {
-                        //console.log(error);
-                        resolve("{}");
-                    }
-                });
-            });
-
-            request.on('error', (e) => {
-                console.error(e);
-            });
-            request.end();
-
+        	if (options.host.indexOf("https://") > -1) {
+	            const header = options.toJson();
+	            const request = https.request(JSON.parse(header), (res) => {
+	                statusCode = res.statusCode;
+	                statusMessage = res.statusMessage;
+	                let data = '';
+	
+	                res.on('data', (d) => {
+	                    data += d;
+	                });
+	
+	                res.on('end', () => {
+	                    if(data === "") {
+	                        data = "{}";
+	                    }
+	
+	                    try{
+	                        let result = JSON.parse(data);
+	                        resolve(result);
+	                    } catch (error) {
+	                        //console.log(error);
+	                        resolve("{}");
+	                    }
+	                });
+	            });
+	
+	            request.on('error', (e) => {
+	                console.error(e);
+	            });
+	            request.end();
+        	}
+        	else {
+        		const header = options.toJson();
+	            const request = http.request(JSON.parse(header), (res) => {
+	                statusCode = res.statusCode;
+	                statusMessage = res.statusMessage;
+	                let data = '';
+	
+	                res.on('data', (d) => {
+	                    data += d;
+	                });
+	
+	                res.on('end', () => {
+	                    if(data === "") {
+	                        data = "{}";
+	                    }
+	
+	                    try{
+	                        let result = JSON.parse(data);
+	                        resolve(result);
+	                    } catch (error) {
+	                        //console.log(error);
+	                        resolve("{}");
+	                    }
+	                });
+	            });
+	
+	            request.on('error', (e) => {
+	                console.error(e);
+	            });
+	            request.end();
+        	}
         }).catch(error => {
             console.log(error);
 

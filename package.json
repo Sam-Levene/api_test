@@ -1,54 +1,9 @@
 {
-  "name": "@wowcher/public-api-wowcher",
-  "version": "0.5.0",
+  "name": "Api_Proof_Of_Concept",
+  "version": "0.0.1",
   "scripts": {
-    "userJourney": "env ENVIRONMENT=public-api02.nxtwowcher.co.uk env ENVIRONMENT02=payment02.nxtwowcher.co.uk mocha ./test/e2e/userJourney.js --reporter mochawesome",
-    "addressTest": "env ENVIRONMENT=public-api02.nxtwowcher.co.uk mocha ./test/addressTest.js --reporter mochawesome",
-    "basketTest": "env ENVIRONMENT=public-api06.devwowcher.co.uk mocha ./test/basketTest.js --reporter mochawesome",
-    "businessTest": "env ENVIRONMENT=public-api02.nxtwowcher.co.uk mocha ./test/businessTest.js --reporter mochawesome",
-    "categoryTest": "env ENVIRONMENT=public-api02.nxtwowcher.co.uk mocha ./test/categoryTest.js --reporter mochawesome",
-    "createUsers-dev01": "env PUBLIC_ENDPOINT=public-api01.devwowcher.co.uk env USERS=300 mocha ./test/e2e/createUsers.js --reporter mochawesome",
-    "createUsers-nxt02": "env PUBLIC_ENDPOINT=public-api02.nxtwowcher.co.uk env USERS=300 mocha ./test/e2e/createUsers.js --reporter mochawesome",
-    "createUsers-nxt03": "env PUBLIC_ENDPOINT=public-api03.nxtwowcher.co.uk env USERS=300 mocha ./test/e2e/createUsers.js --reporter mochawesome",
-    "dealTest": "env ENVIRONMENT=public-api02.nxtwowcher.co.uk mocha ./test/dealTest.js --reporter mochawesome",
-    "locationTest": "env ENVIRONMENT=public-api02.nxtwowcher.co.uk mocha ./test/locationTest.js --reporter mochawesome",
-    "loginTest": "env ENVIRONMENT=public-api06.devwowcher.co.uk mocha ./test/loginTest.js --reporter mochawesome",
-    "lsSailthruApiTest": "env ENVIRONMENT=sailthru-api02.nxtlivingsocial.co.uk mocha ./test/e2e/sailthruApiTest.js --reporter mochawesome",
-    "navigationTest": "env ENVIRONMENT=public-api02.nxtwowcher.co.uk mocha ./test/navigationTest.js --reporter mochawesome",
-    "ppcpageTest": "env ENVIRONMENT=public-api02.nxtwowcher.co.uk mocha ./test/ppcpageTest.js --reporter mochawesome",
-    "promocodeTest": "env ENVIRONMENT=public-api02.nxtwowcher.co.uk mocha ./test/promocodeTest.js --reporter mochawesome",
-    "recommendationsTest": "env ENVIRONMENT=public-api02.nxtwowcher.co.uk mocha ./test/recommendationsTest.js --reporter mochawesome",
-    "robotTest": "env ENVIRONMENT=public-api02.nxtwowcher.co.uk mocha ./test/robotTest.js --reporter mochawesome",
-    "shortcutTest": "env ENVIRONMENT=public-api02.nxtwowcher.co.uk mocha ./test/shortcutTest.js --reporter mochawesome",
-    "socialcueTest": "env ENVIRONMENT=public-api02.nxtwowcher.co.uk mocha ./test/socialcueTest.js --reporter mochawesome",
-    "staticpageTest": "env ENVIRONMENT=public-api02.nxtwowcher.co.uk mocha ./test/staticpageTest.js --reporter mochawesome",
-    "subscriptionTest": "env ENVIRONMENT=public-api02.nxtwowcher.co.uk mocha ./test/subscriptionTest.js --reporter mochawesome",
-    "userTest": "env ENVIRONMENT=public-api03.devwowcher.co.uk env mocha ./test/userTest.js --reporter mochawesome",
-    "voucherTest": "env ENVIRONMENT=public-api02.nxtwowcher.co.uk mocha ./test/voucherTest.js --reporter mochawesome",
-    "wowSailthruApiTest": "env ENVIRONMENT=sailthru-api02.nxtwowcher.co.uk mocha ./test/e2e/sailthruApiTest.js --reporter mochawesome",
-    "dev01Tests": "env ENVIRONMENT=public-api01.devwowcher.co.uk env ENVIRONMENT02=payment01.devwowcher.co.uk mocha ./test/*.js --reporter mochawesome",
-    "dev02Tests": "env ENVIRONMENT=public-api02.devwowcher.co.uk env ENVIRONMENT02=payment02.devwowcher.co.uk mocha ./test/*.js --reporter mochawesome",
-    "dev03Tests": "env ENVIRONMENT=public-api03.devwowcher.co.uk env ENVIRONMENT02=payment03.devwowcher.co.uk mocha ./test/*.js --reporter mochawesome",
-    "dev04Tests": "env ENVIRONMENT=public-api04.devwowcher.co.uk env ENVIRONMENT02=payment04.devwowcher.co.uk mocha ./test/*.js --reporter mochawesome",
-    "dev05Tests": "env ENVIRONMENT=public-api05.devwowcher.co.uk env ENVIRONMENT02=payment05.devwowcher.co.uk mocha ./test/*.js --reporter mochawesome",
-    "dev06Tests": "env ENVIRONMENT=public-api06.devwowcher.co.uk env ENVIRONMENT02=payment06.devwowcher.co.uk mocha ./test/*.js --reporter mochawesome",
-    "nxt01Tests": "env ENVIRONMENT=public-api-01.nxtwowcher.co.uk env ENVIRONMENT02=payment01.nxtwowcher.co.uk mocha ./test/*.js --reporter mochawesome",
-    "nxt02Tests": "env ENVIRONMENT=public-api02.nxtwowcher.co.uk env ENVIRONMENT02=payment02.nxtwowcher.co.uk mocha ./test/*.js --reporter mochawesome",
-    "universalStorageTest": "env ENVIRONMENT=public-api02.nxtwowcher.co.uk mocha ./test/e2e/universalStorageTest.js --reporter mochawesome",
-    "siteCheck": "env PUBLIC_ENDPOINT=public-api02.nxtwowcher.co.uk env PAYMENT_ENDPOINT=payment02.nxtwowcher.co.uk mocha ./test/e2e/apicheck.js --reporter mochawesome",
     "docgen": "jsdoc api -r -t node_modules/docdash",
-    "api-check-nxt01": "env PUBLIC_ENDPOINT=public-api01.nxtwowcher.co.uk env PAYMENT_ENDPOINT=payment01.nxtwowcher.co.uk env USER_CREATE_AFTER_ITERATIONS=5 env ENV=nxt01 mocha ./test/e2e/apicheck.js --reporter mochawesome",
-    "api-check-nxt02": "env PUBLIC_ENDPOINT=public-api02.nxtwowcher.co.uk env PAYMENT_ENDPOINT=payment02.nxtwowcher.co.uk env USER_CREATE_AFTER_ITERATIONS=5 env ENV=nxt02 mocha ./test/e2e/apicheck.js --reporter mochawesome",
-    "api-check-nxt03": "env PUBLIC_ENDPOINT=public-api03.nxtwowcher.co.uk env PAYMENT_ENDPOINT=payment03.nxtwowcher.co.uk env USER_CREATE_AFTER_ITERATIONS=5 env ENV=nxt03 mocha ./test/e2e/apicheck.js --reporter mochawesome",
-    "api-check-dev01": "env PUBLIC_ENDPOINT=public-api01.devwowcher.co.uk env PAYMENT_ENDPOINT=payment01.devwowcher.co.uk env USER_CREATE_AFTER_ITERATIONS=5 env ENV=api01 mocha ./test/e2e/apicheck.js --reporter mochawesome",
-    "api-check-dev02": "env PUBLIC_ENDPOINT=public-api02.devwowcher.co.uk env PAYMENT_ENDPOINT=payment02.devwowcher.co.uk env USER_CREATE_AFTER_ITERATIONS=5 env ENV=api02 mocha ./test/e2e/apicheck.js --reporter mochawesome",
-    "api-check-dev03": "env PUBLIC_ENDPOINT=public-api02.devwowcher.co.uk env PAYMENT_ENDPOINT=payment03.devwowcher.co.uk env USER_CREATE_AFTER_ITERATIONS=5 env ENV=api03 mocha ./test/e2e/apicheck.js --reporter mochawesome",
-    "api-check-dev04": "env PUBLIC_ENDPOINT=public-api04.devwowcher.co.uk env PAYMENT_ENDPOINT=payment04.devwowcher.co.uk env USER_CREATE_AFTER_ITERATIONS=5 env ENV=api04 mocha ./test/e2e/apicheck.js --reporter mochawesome",
-    "api-check-dev05": "env PUBLIC_ENDPOINT=public-api05.devwowcher.co.uk env PAYMENT_ENDPOINT=payment05.devwowcher.co.uk env USER_CREATE_AFTER_ITERATIONS=5 env ENV=api05 mocha ./test/e2e/apicheck.js --reporter mochawesome",
-    "api-check-dev06": "env PUBLIC_ENDPOINT=public-api06.devwowcher.co.uk env PAYMENT_ENDPOINT=payment06.devwowcher.co.uk env USER_CREATE_AFTER_ITERATIONS=5 env ENV=api06 mocha ./test/e2e/apicheck.js --reporter mochawesome",
-    "api-check-prod":  "env PUBLIC_ENDPOINT=public-api01.devwowcher.co.uk env PAYMENT_ENDPOINT=payment01.devwowcher.co.uk env USER_CREATE_AFTER_ITERATIONS=5 env ENV=api01 mocha ./test/e2e/apicheck.js --reporter mochawesome",
-    "api-check-nxt-fixed-user":  "env PUBLIC_ENDPOINT=public-api02.nxtwowcher.co.uk env PAYMENT_ENDPOINT=payment02.nxtwowcher.co.uk env USER=nodkane12@gmail.com PASSWORD=123456 env ENV=api02 mocha ./test/e2e/apiCheckNxtFixedUser.js --reporter mochawesome",
-    "api-check-prod-fixed-user":  "env PUBLIC_ENDPOINT=public-api.wowcher.co.uk env PAYMENT_ENDPOINT=payment.wowcher.co.uk env USER=MYUSER PASSWORD=MYPASS env ENV=api mocha ./test/e2e/apiCheckProdFixedUser.js --reporter mochawesome"
+    "poc": "env ENVIRONMENT=dummy.restapiexample.com mocha ./test/testpoc.js --reporter mochawesome"
   },
 
   "dependencies": {
@@ -81,14 +36,13 @@
     "test": "test"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://sam_levene@bitbucket.org/wowcher/public_api_tests.git"
+    "type": "git"
   },
   "keywords": [
     "api",
     "wowcher"
   ],
-  "author": "Wowcher Automation Team",
+  "author": "PPL Automation Team",
   "license": "MIT",
   "homepage": "https://bitbucket.org/wowcher/public_api_tests#readme"
 }

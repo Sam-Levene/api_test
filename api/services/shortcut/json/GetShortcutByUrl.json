@@ -1,9 +1,0 @@
-{
-  "redirectUrl": "string",
-  "httpStatus": "number",
-  "siteName": "string",
-  "id": "number",
-  "_score": "number",
-  "brand": "string",
-  "url": "string"
-}

@@ -1,8 +1,0 @@
-{
-  "id": "string",
-  "customerToken": "string",
-  "brand": "string",
-  "products": [
-    {}
-  ]
-}

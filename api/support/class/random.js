@@ -15,6 +15,16 @@ class Random {
             text += possible.charAt(Math.floor(Math.random() * possible.length));
         return text;
     }
+    
+    /**
+     * Generate random numeric value of the given maximum value
+     * @param value
+     * @returns {number}
+     */
+    
+    static number(value) {
+    	return Math.floor(Math.random() * Math.floor(length));
+    }
 
     /**
      * Generate and Return random Map entry

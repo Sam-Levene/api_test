@@ -1,7 +1,0 @@
-{
-  "lastMinute": "number",
-  "lastFiveMinutes": "number",
-  "lastHour": "number",
-  "lastSixHours": "number",
-  "lastTwentyFourHours": "number"
-}

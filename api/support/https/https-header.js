@@ -1,6 +1,5 @@
 /**
- * HTTP and Wowcher header definitions
- * All headers will be sent to the Public API.  Headers not relevant to the API endpoint are ignored.
+ * HTTP header definitions
  * Class construction :
  * @example
  * httpsHeader = new HttpsHeader();
@@ -8,7 +7,6 @@
  * .withHostName(environment)
  * .withMethod('GET')
  * .withPath(path)
- * .withApiKey(apiKey)
  * .withAccept('application/json')
  * .withContentType('application/json');
  * @class
@@ -29,29 +27,16 @@ class HttpHeaderOptions {
         this.contentType = '';
         /** @type {number} */
         this.contentLength = undefined;
+        /** @type {number} */
+        this.port = undefined;
         /** @type {string} */
-        this.brand = '';
-        /** @type {string}  */
-        this.wowcherUser ='';
-        /** @type {string}  */
-        this.countryCode = '';
-        /** @type {string}  */
-        this.apiAuthToken = '';
-        /** @type {string}  */
-        this.lat = '';
-        /** @type {string}  */
-        this.long = '';
-        /** @type {string} */
-        this.customerToken = '';
-        /** @type {string} */
-        this.id = '';
-        /** @type {string} */
-        this.productId = '';
+        this.protocol = '';
+        
     }
 
     /**
      * Generate header
-     * @returns {{withHostName: withHostName, withMethod: withMethod, withPath: withPath, withAccept: withAccept, withContentType: withContentType, withBrand: withBrand, withApiKey: withApiKey, withWowcherUser: withWowcherUser, withContentLength: withContentLength, withCountryCode: withCountryCode, withApiAuthToken: withApiAuthToken, withLat: withLat, withLong: withLong, toJson: toJson}}
+     * @returns {{withHostName: withHostName, withMethod: withMethod, withPath: withPath, withAccept: withAccept, withContentType: withContentType, withContentLength: withContentLength, toJson: toJson}}
      */
     createHeader() {
         return {
@@ -79,90 +64,27 @@ class HttpHeaderOptions {
                 this.contentLength = n;
                 return this;
             },
-            withBrand: function (n) {
-                this.brand = n;
-                return this;
+            withPort: function(n) {
+            	this.port = n;
+            	return this;
             },
-            withApiKey: function (n) {
-                this.apiKey = n;
-                return this;
-            },
-            withWowcherUser: function (n) {
-                this.wowcherUser = n;
-                return this;
-            },
-            withCountryCode: function (n) {
-                this.countryCode = n;
-                return this;
-            },
-            withApiAuthToken: function (n) {
-                this.apiAuthToken = n;
-                return this;
-            },
-            withLat: function(n){
-                this.lat = n;
-                return this;
-            },
-            withLong: function(n){
-                this.long = n;
-                return this;
-            },
-            withCustomerToken: function(n){
-              this.customerToken = n;
-              return this;
-            },
-            withId: function(n){
-              this.id = n;
-              return this;
-            },
-            withProductId: function(n){
-                this.productId = n;
-                return this;
+            withProtocol: function(n) {
+            	this.protocol = n;
+            	return this;
             },
             toJson: function () {
-                if (this.brand === "wowcher") {
-                    return JSON.stringify({
-                        'hostname': this.host,
-                        'method': this.method,
-                        'path': this.path,
-                        'headers': {
-                            'Cookie': 'wowcher_user=' + this.wowcherUser,
-                            'Accept': this.accept,
-                            'Country-Code': this.countryCode,
-                            'Content-Length': this.contentLength,
-                            'Content-Type': this.contentType,
-                            'brand': this.brand,
-                            'wowcher_user': this.wowcherUser,
-                            'apiAuthToken': this.apiAuthToken,
-                            'lat': this.lat,
-                            'lon': this.long,
-                            'apiKey': this.apiKey,
-                            'customerToken': this.customerToken,
-                            'id': this.id,
-                            'productId': this.productId
-                        }
-                    });
-                }
-                else {
-                    return JSON.stringify({
-                        'hostname': this.host,
-                        'method': this.method,
-                        'path': this.path,
-                        'headers': {
-                            'Cookie': 'apiAuthToken=' + this.apiAuthToken,
-                            'Accept': this.accept,
-                            'Country-Code': this.countryCode,
-                            'Content-Length': this.contentLength,
-                            'Content-Type': this.contentType,
-                            'brand': this.brand,
-                            'wowcher_user': this.wowcherUser,
-                            'apiAuthToken': this.apiAuthToken,
-                            'lat': this.lat,
-                            'lon': this.long,
-                            'apiKey': this.apiKey,
-                        }
-                    });
-                }
+            	return JSON.stringify({
+            		'hostname': this.host,
+                    'method': this.method,
+                    'path': this.path,
+                    'port': this.port,
+                    'protocol': this.protocol,
+                    'headers': {
+                        'Accept': this.accept,
+                        'Content-Length': this.contentLength,
+                        'Content-Type': this.contentType
+                    }
+                });                
             }
         }
     }
