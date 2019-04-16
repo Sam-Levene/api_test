@@ -11,8 +11,6 @@ class Response {
 
     constructor(builder) {
         /** @type {string} */
-        this.result = builder.result;
-        /** @type {string} */
         this.statusMessage = builder.statusMessage;
         /** @type {string} */
         this.statusCode = builder.statusCode;
@@ -84,20 +82,10 @@ class Response {
          * new Response.Builder().withStatusCode(statusCode).build()
          */
         class Builder {
-            constructor() {
-                this.result = '';
+            constructor() { 
                 this.statusMessage = '';
                 this.statusCode = '';
                 this.responseHeaders = '';
-            }
-            /**
-             * Set result
-             * @param {string} result
-             * @returns {Builder}
-             */
-            withResult(result) {
-                this.result = result;
-                return this
             }
             /**
              * Set Status Message

@@ -7,3 +7,5 @@ mochawesome-report/*
 jsdoc/*
 out/*
 storage_properties/*
+pacts/*
+logs/*

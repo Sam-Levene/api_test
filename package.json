@@ -1,12 +1,17 @@
 {
   "name": "API_Proof_Of_Concept",
   "version": "0.0.1",
+  "main": "index.js",
   "scripts": {
     "docgen": "jsdoc api -r -t node_modules/docdash",
-    "poc": "env ENVIRONMENT=dummy.restapiexample.com mocha ./test/test_poc.js --reporter mochawesome"
+    "poc": "env ENVIRONMENT=dummy.restapiexample.com mocha ./other_node/test_poc.js --reporter mochawesome",
+    "nock": "mocha ./other_node/nock_http.js --reporter mochawesome",
+    "pact-test": "mocha ./other_node/pact-test.js --reporter mochawesome",
+    "test": "rimraf pacts && mocha"
   },
   "dependencies": {
     "@pact-foundation/pact": "^8.2.0",
+    "axios": "^0.18.0",
     "babel-polyfill": "^6.26.0",
     "babel-preset-stage-0": "^6.24.1",
     "debug": "~2.6.0",
@@ -44,6 +49,6 @@
   "author": "Samuel Levene",
   "license": "MIT",
   "config": {
-        "pact_do_not_track": true
-    }
+    "pact_do_not_track": true
+  }
 }
