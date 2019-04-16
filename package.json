@@ -6,7 +6,6 @@
     "docgen": "jsdoc api -r -t node_modules/docdash",
     "poc": "env ENVIRONMENT=dummy.restapiexample.com mocha ./other_node/test_poc.js --reporter mochawesome",
     "nock": "mocha ./other_node/nock_http.js --reporter mochawesome",
-    "pact-test": "mocha ./other_node/pact-test.js --reporter mochawesome",
     "test": "rimraf pacts && mocha"
   },
   "dependencies": {
@@ -36,7 +35,6 @@
     "jsdoc": "^3.5.5",
     "mochawesome": "^3.1.1"
   },
-  "main": "api/services",
   "directories": {
     "test": "test"
   },

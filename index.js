@@ -2,26 +2,14 @@
 
 const axios = require("axios")
 
-exports.getMeDogs = endpoint => {
+exports.getEmployees = endpoint => {
   const url = endpoint.url
   const port = endpoint.port
 
   return axios.request({
     method: "GET",
     baseURL: `${url}:${port}`,
-    url: "/dogs",
-    headers: { Accept: "application/json" },
-  })
-}
-
-exports.getMeDog = endpoint => {
-  const url = endpoint.url
-  const port = endpoint.port
-
-  return axios.request({
-    method: "GET",
-    baseURL: `${url}:${port}`,
-    url: "/dogs/1",
+    url: "/api/v1/employees",
     headers: { Accept: "application/json" },
   })
 }
