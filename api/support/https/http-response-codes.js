@@ -43,6 +43,15 @@ class HttpResponseCodes {
     static isNotFound(response) {
         return response === 404;
     }
+    
+    /**
+     * Not Acceptable
+     * @param response
+     * @returns {boolean}
+     */
+    static isNotAcceptable(response){
+        return response === 406;
+    }
 
     /**
      * Conflict

@@ -7,7 +7,7 @@ const schema = require("../api/services/employees/json/employee-schema");
 
 let environmentUrl = process.env.ENVIRONMENT;
 let tv4 = require('tv4');
-let customId;
+let customId, badId = "$SELECT%20*%20FROM%20*;";
 
 describe("Get an Employee", function() {
     it("Creates an object builder", function () {
@@ -53,6 +53,12 @@ describe("Get an Employee", function() {
 	    });
     }).timeout(10000);
     
+    it("doesn't get an employee from dummy api with an invalid id", function() {
+    	return EmployeeService.getEmployeeById(environmentUrl, badId).then((result) => {
+	        expect(HttpResponseCodes.isNotAcceptable(result.statusCode)).to.equal(true);
+	    });
+    }).timeout(10000);
+    
     it("creates an employee and posts it to the dummy api", function() {
     	let testEmployee = new Employee.Builder()
 		.withEmployeeName("Jon Stark")
@@ -83,9 +89,28 @@ describe("Get an Employee", function() {
 	    });
     }).timeout(10000);
     
+    it("doesn't update an employee from dummy api with an invalid id", function() {
+    	let invalidEmployee = new Employee.Builder()
+		.withEmployeeName("Jon Snow")
+		.withEmployeeAge("29")
+		.withEmployeeSalary("48000")
+		.withId(badId)
+		.build();
+    	
+    	return EmployeeService.updateEmployeeById(environmentUrl, badId, invalidEmployee.toJson()).then((result) => {
+	        expect(HttpResponseCodes.isNotAcceptable(result.statusCode)).to.equal(true);
+	    });
+    }).timeout(10000);
+    
     it("deletes an employee from the dummy api with id", function() {
     	return EmployeeService.deleteEmployeeById(environmentUrl, customId).then((result) => {
 	        expect(HttpResponseCodes.isOK(result.statusCode)).to.equal(true);
+	    });
+    }).timeout(10000);
+    
+    it("doesn't delete an employee from the dummy api with an invalid id", function() {
+    	return EmployeeService.deleteEmployeeById(environmentUrl, badId).then((result) => {
+	        expect(HttpResponseCodes.isNotAcceptable(result.statusCode)).to.equal(true);
 	    });
     }).timeout(10000);
 });
