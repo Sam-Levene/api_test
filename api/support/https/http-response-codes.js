@@ -45,6 +45,15 @@ class HttpResponseCodes {
     }
     
     /**
+     * Method Not Allowed
+     * @param response
+     * @returns {boolean}
+     */
+    static isNotAllowed(response){
+        return response === 405;
+    }
+    
+    /**
      * Not Acceptable
      * @param response
      * @returns {boolean}

@@ -75,6 +75,23 @@ class EmployeeService {
         })
     }
     
+    static badCreate(environment, employee) {
+        let httpsHeader = new HttpsHeader();
+        let header = httpsHeader.createHeader()
+            .withHostName(environment)
+            .withMethod('GET')
+            .withPath(path3)
+            .withAccept('application/json')
+            .withContentType('application/json');
+
+        return new Promise(function (resolve, reject) {
+            HttpsRequest.get(header).then((res) => {
+            	let response = new Response.Builder().withStatusCode(HttpsRequest.getStatusCode()).build();
+            	resolve(response);
+            })
+        })
+    }
+    
     static updateEmployeeById(environment, id, employee) {
     	let httpsHeader = new HttpsHeader();
         let header = httpsHeader.createHeader()

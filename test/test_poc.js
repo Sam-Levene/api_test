@@ -74,6 +74,18 @@ describe("Get an Employee", function() {
 	    });
     }).timeout(10000);
     
+    it("doesn't creates an employee with a bad data format", function() {
+    	let testEmployee = new Employee.Builder()
+		.withEmployeeName(null)
+		.withEmployeeAge(null)
+		.withEmployeeSalary(null)
+		.build();
+    	
+    	return EmployeeService.badCreate(environmentUrl, testEmployee.toJson()).then((result) => {
+    		 expect(HttpResponseCodes.isNotAllowed(result.statusCode)).to.equal(true);
+	    });
+    }).timeout(10000);
+    
     it("updates an employee from the dummy api with id", function() {
     	let testEmployee = new Employee.Builder()
 		.withEmployeeName("Jon Snow")
